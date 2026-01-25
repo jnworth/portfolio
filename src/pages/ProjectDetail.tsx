@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { getProjectById } from '../data/projects';
+import TokenDashboard from '../components/TokenDashboard';
 
 export default function ProjectDetail() {
   const { id } = useParams<{ id: string }>();
@@ -57,10 +58,23 @@ export default function ProjectDetail() {
             </p>
           </div>
 
-          {/* Image placeholder */}
-          <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-700 rounded-xl mb-12 flex items-center justify-center">
-            <span className="text-gray-400 dark:text-gray-600">Project screenshot</span>
-          </div>
+          {/* Live Dashboard for defi-swap project */}
+          {project.id === 'defi-swap' ? (
+            <div className="mb-12">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="relative flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                </span>
+                <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Live Token Feed</h2>
+              </div>
+              <TokenDashboard />
+            </div>
+          ) : (
+            <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-700 rounded-xl mb-12 flex items-center justify-center">
+              <span className="text-gray-400 dark:text-gray-600">Project screenshot</span>
+            </div>
+          )}
 
           {/* Content */}
           <div className="prose prose-lg dark:prose-invert max-w-none mb-12">
@@ -79,18 +93,41 @@ export default function ProjectDetail() {
               ))}
             </div>
 
-            <h2>Key Features</h2>
-            <ul>
-              <li>Feature placeholder - describe a key feature of the project</li>
-              <li>Feature placeholder - describe another key feature</li>
-              <li>Feature placeholder - describe technical challenges solved</li>
-            </ul>
+            {project.id === 'defi-swap' ? (
+              <>
+                <h2>Security Checks</h2>
+                <ul>
+                  <li><strong>Liquidity Verification</strong> - Ensures minimum ETH liquidity in the pair</li>
+                  <li><strong>Honeypot Detection</strong> - Simulates buy and sell to detect if selling is blocked</li>
+                  <li><strong>Tax Analysis</strong> - Calculates buy/sell taxes via on-chain simulation</li>
+                  <li><strong>LP Burn Check</strong> - Verifies if liquidity provider tokens are burned</li>
+                  <li><strong>Owner Analysis</strong> - Checks token holdings of contract owner/deployer</li>
+                </ul>
 
-            <h2>Technical Highlights</h2>
-            <p>
-              Add details about the technical implementation, architecture decisions,
-              performance optimizations, or unique solutions you developed.
-            </p>
+                <h2>Technical Highlights</h2>
+                <p>
+                  All security checks run on-chain in parallel using Promise.all(), completing in under 300ms.
+                  No external API dependencies means the bot can analyze tokens the moment they're created,
+                  before third-party services have indexed them. The live dashboard above updates automatically
+                  via a GitHub Gist integration.
+                </p>
+              </>
+            ) : (
+              <>
+                <h2>Key Features</h2>
+                <ul>
+                  <li>Feature placeholder - describe a key feature of the project</li>
+                  <li>Feature placeholder - describe another key feature</li>
+                  <li>Feature placeholder - describe technical challenges solved</li>
+                </ul>
+
+                <h2>Technical Highlights</h2>
+                <p>
+                  Add details about the technical implementation, architecture decisions,
+                  performance optimizations, or unique solutions you developed.
+                </p>
+              </>
+            )}
           </div>
 
           {/* Links */}

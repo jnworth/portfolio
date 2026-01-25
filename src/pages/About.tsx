@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion';
 import Section from '../components/Section';
+import profilePhoto from '../assets/2973A697-BA36-4DB0-83C6-ACB3539E4A92.jpeg';
 
 const skills = [
-  { category: 'Frontend', items: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'React Native'] },
-  { category: 'Backend', items: ['Node.js', 'Python', 'PostgreSQL', 'MongoDB', 'GraphQL'] },
-  { category: 'Blockchain', items: ['Solidity', 'Hardhat', 'ethers.js', 'The Graph', 'IPFS'] },
-  { category: 'AI/ML', items: ['LangChain', 'OpenAI API', 'TensorFlow', 'RAG', 'Prompt Engineering'] },
-  { category: 'DevOps', items: ['Docker', 'AWS', 'Vercel', 'GitHub Actions', 'Terraform'] },
+  { category: 'Frontend', items: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Angular'] },
+  { category: 'Backend', items: ['Node.js', 'Express', 'Python', 'Oracle SQL'] },
+  { category: 'Blockchain', items: ['Solidity', 'Rust','Hardhat', 'ethers.js', 'Alchemy'] },
+  { category: 'AI/ML', items: ['Bedrock', 'RAG Architecture', 'Prompt Engineering', 'Claude'] },
+  { category: 'DevOps', items: ['Docker', 'AWS', 'Vercel', 'GitHub Actions', 'Azure DevOps'] },
 ];
 
 export default function About() {
@@ -23,8 +24,8 @@ export default function About() {
 
           <div className="prose prose-lg dark:prose-invert max-w-none mb-16">
             <p className="text-xl text-gray-600 dark:text-gray-400">
-              I'm a senior full-stack developer with over 8 years of experience building
-              scalable web applications, mobile apps, and blockchain solutions.
+              Full-stack developer with 3+ years of experience in digital solutions consulting,
+              delivering end-to-end projects across a variety of tech stacks.
             </p>
           </div>
         </motion.div>
@@ -33,25 +34,29 @@ export default function About() {
         <Section className="!py-0 mb-16">
           <div className="grid md:grid-cols-3 gap-12 items-start">
             <div className="md:col-span-1">
-              <div className="aspect-square bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-700 rounded-2xl flex items-center justify-center">
-                <span className="text-gray-400 dark:text-gray-600">Photo</span>
+              <div className="aspect-square rounded-2xl overflow-hidden">
+                <img
+                  src={profilePhoto}
+                  alt="James Worth"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
 
             <div className="md:col-span-2 prose prose-lg dark:prose-invert">
               <p>
-                My journey in software development started with a curiosity about how things work.
-                Today, I specialize in building full-stack applications that leverage cutting-edge
-                technologies to solve real-world problems.
+                I work in digital solutions consulting, where I'm responsible for developing
+                and shipping applications from concept through to production. I own the complete
+                development lifecycle—from initial architecture to deployment and beyond.
               </p>
               <p>
-                I'm particularly passionate about the intersection of blockchain technology and
-                traditional software development, as well as integrating AI capabilities to create
-                more intelligent and user-friendly applications.
+                My approach emphasizes modern AI-assisted development workflows, allowing me
+                to move faster without sacrificing code quality. I'm particularly passionate
+                about blockchain technology and its potential to reshape how we build applications.
               </p>
               <p>
-                When I'm not coding, you can find me contributing to open-source projects,
-                exploring new technologies, or sharing knowledge with the developer community.
+                Outside of client work, I explore emerging technologies through personal projects
+                in mobile development and Web3, constantly expanding my technical toolkit.
               </p>
             </div>
           </div>

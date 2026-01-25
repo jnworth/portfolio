@@ -44,7 +44,7 @@ export default function Home() {
               transition={{ delay: 0.4 }}
               className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-4"
             >
-              Senior Full Stack Developer
+              Full Stack Developer
             </motion.p>
 
             <motion.p
@@ -53,7 +53,7 @@ export default function Home() {
               transition={{ delay: 0.5 }}
               className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl"
             >
-              I develop scalable web applications using modern AI-assisted workflows, with a passion for blockchain technology.
+              By combining AI-assisted development workflows with hands-on consulting, I help clients clarify their needs and turn them into practical, production-ready solutions.
             </motion.p>
 
             <motion.div
@@ -155,13 +155,13 @@ export default function Home() {
                 About Me
               </h2>
               <p className="text-gray-600 dark:text-gray-400 mb-6">
-                I'm a senior full-stack developer with a passion for building innovative solutions.
-                With expertise spanning blockchain technology, mobile app development, and AI integration,
-                I bring a unique perspective to every project.
+                I'm a full-stack developer specializing in digital solutions consulting across
+                a variety of tech stacks. I take projects from concept to production, owning
+                the complete development lifecycle.
               </p>
               <p className="text-gray-600 dark:text-gray-400 mb-8">
-                My approach combines technical excellence with a focus on user experience,
-                ensuring that every solution is both powerful and intuitive.
+                My approach combines modern AI-assisted development workflows with a passion
+                for blockchain technology and emerging platforms.
               </p>
               <Link
                 to="/about"
@@ -176,10 +176,10 @@ export default function Home() {
 
             <div className="grid grid-cols-2 gap-4">
               {[
-                { label: 'Years Experience', value: '8+' },
-                { label: 'Projects Completed', value: '50+' },
-                { label: 'Technologies', value: '20+' },
-                { label: 'Happy Clients', value: '30+' },
+                { label: 'Years Experience', value: '3+' },
+                { label: 'Projects Delivered', value: '20+' },
+                { label: 'Tech Stacks', value: '7+' },
+                { label: 'End-to-End Builds', value: '15+' },
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}

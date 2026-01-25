@@ -14,21 +14,21 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 'defi-swap',
-    title: 'DeFi Token Swap',
-    description: 'Decentralized exchange for ERC-20 token swaps with liquidity pools.',
-    longDescription: `A fully functional decentralized exchange built on Ethereum. Features include automated market making (AMM),
-    liquidity provision with LP tokens, and gas-optimized smart contracts. The frontend provides real-time price quotes
-    and seamless wallet integration.`,
+    title: 'DeFi Token Sniper',
+    description: 'Real-time bot that monitors Uniswap V2 for new token pairs and runs on-chain security checks to detect honeypots, high taxes, and rug pulls.',
+    longDescription: `A cryptocurrency sniping bot that monitors Ethereum mainnet for new Uniswap V2 trading pairs in real-time.
+    When a new WETH pair is created, the bot runs parallel on-chain security checks including liquidity verification,
+    LP burn status, owner/deployer token holdings, and buy/sell tax simulation to detect honeypots. All checks complete
+    in under 300ms with no external API dependencies.`,
     category: 'blockchain',
-    technologies: ['Solidity', 'Hardhat', 'React', 'ethers.js', 'The Graph'],
+    technologies: ['Node.js', 'ethers.js', 'WebSocket', 'Uniswap V2', 'TypeScript'],
     imageUrl: '/placeholder-blockchain.jpg',
-    githubUrl: 'https://github.com',
-    liveUrl: 'https://example.com',
+    githubUrl: 'https://github.com/jnworth/sniperbot',
     featured: true,
   },
   {
     id: 'fitness-tracker',
-    title: 'FitSync Mobile',
+    title: 'Stache Bookmarking App',
     description: 'Cross-platform fitness tracking app with AI-powered workout recommendations.',
     longDescription: `A React Native fitness application that syncs with wearable devices to track workouts,
     nutrition, and sleep patterns. Features an AI coach that provides personalized workout plans based on

@@ -54,7 +54,7 @@ export default function Contact() {
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition"
-                  placeholder="James Worth"
+                  placeholder="Your name"
                 />
               </div>
 
@@ -69,7 +69,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition"
-                  placeholder="your@email.com"
+                  placeholder="Your email"
                 />
               </div>
 
@@ -118,7 +118,7 @@ export default function Contact() {
 
               <div className="space-y-4">
                 <a
-                  href="mailto:your@email.com"
+                  href="mailto:jamesnworth@gmail.com"
                   className="flex items-center gap-4 p-4 rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 hover:border-primary-300 dark:hover:border-primary-700 transition-colors"
                 >
                   <div className="w-10 h-10 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center">
@@ -128,12 +128,12 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="text-sm text-gray-500 dark:text-gray-400">Email</div>
-                    <div className="text-gray-900 dark:text-white">your@email.com</div>
+                    <div className="text-gray-900 dark:text-white">jamesnworth@gmail.com</div>
                   </div>
                 </a>
 
                 <a
-                  href="https://github.com"
+                  href="https://github.com/jnworth"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 hover:border-primary-300 dark:hover:border-primary-700 transition-colors"
@@ -145,12 +145,12 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="text-sm text-gray-500 dark:text-gray-400">GitHub</div>
-                    <div className="text-gray-900 dark:text-white">@yourusername</div>
+                    <div className="text-gray-900 dark:text-white">@jnworth</div>
                   </div>
                 </a>
 
                 <a
-                  href="https://linkedin.com"
+                  href="https://linkedin.com/in/james-worth"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 hover:border-primary-300 dark:hover:border-primary-700 transition-colors"
@@ -162,7 +162,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="text-sm text-gray-500 dark:text-gray-400">LinkedIn</div>
-                    <div className="text-gray-900 dark:text-white">yourname</div>
+                    <div className="text-gray-900 dark:text-white">james-worth</div>
                   </div>
                 </a>
               </div>
