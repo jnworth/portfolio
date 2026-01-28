@@ -6,9 +6,8 @@ export default function DarkModeToggle() {
     if (typeof window !== 'undefined') {
       const stored = localStorage.getItem('darkMode');
       if (stored !== null) return stored === 'true';
-      return window.matchMedia('(prefers-color-scheme: dark)').matches;
     }
-    return true;
+    return true; // Default to dark mode for first-time visitors
   });
 
   useEffect(() => {

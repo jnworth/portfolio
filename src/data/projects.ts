@@ -1,3 +1,5 @@
+import tokenDashboardImg from '../assets/token-dashboard.png';
+
 export interface Project {
   id: string;
   title: string;
@@ -22,21 +24,21 @@ export const projects: Project[] = [
     in under 300ms with no external API dependencies.`,
     category: 'blockchain',
     technologies: ['Node.js', 'ethers.js', 'WebSocket', 'Uniswap V2', 'TypeScript'],
-    imageUrl: '/placeholder-blockchain.jpg',
+    imageUrl: tokenDashboardImg,
     githubUrl: 'https://github.com/jnworth/sniperbot',
     featured: true,
   },
   {
-    id: 'fitness-tracker',
+    id: 'stache',
     title: 'Stache Bookmarking App',
-    description: 'Cross-platform fitness tracking app with AI-powered workout recommendations.',
-    longDescription: `A React Native fitness application that syncs with wearable devices to track workouts,
-    nutrition, and sleep patterns. Features an AI coach that provides personalized workout plans based on
-    user goals and historical performance data.`,
+    description: 'iOS app with Share Extension that lets users save and organize URLs from social media into collections called "Staches."',
+    longDescription: `A Flutter mobile app with a native iOS Share Extension for saving and organizing URLs from social media platforms.
+    Share content directly from Instagram, TikTok, YouTube, Pinterest, or any website into custom collections called "Staches."
+    Features automatic metadata extraction using official oEmbed APIs and Apple's LPLinkMetadata for rich link previews.
+    Uses App Group for seamless data sharing between the main app and Share Extension with Stream-based reactive state management.`,
     category: 'mobile',
-    technologies: ['React Native', 'TypeScript', 'Firebase', 'TensorFlow Lite'],
+    technologies: ['Flutter', 'Dart', 'Swift', 'iOS Share Extension', 'App Groups'],
     imageUrl: '/placeholder-mobile.jpg',
-    githubUrl: 'https://github.com',
     featured: true,
   },
   {
@@ -51,6 +53,21 @@ export const projects: Project[] = [
     imageUrl: '/placeholder-ai.jpg',
     githubUrl: 'https://github.com',
     liveUrl: 'https://example.com',
+    featured: true,
+  },
+  {
+    id: 'iwr-library',
+    title: 'IWR Project Assistance Library',
+    description: 'Document management system for U.S. Army Corps of Engineers water resources projects with secure file storage and metadata cataloging.',
+    longDescription: `A full-stack web application built for the U.S. Army Corps of Engineers to manage and distribute
+    project assistance documents for integrated water resources initiatives. Features secure document upload and retrieval
+    via AWS S3, comprehensive metadata cataloging with Oracle Database, and role-based access control for internal users.
+    Hosted on AWS GovCloud (EC2) to meet federal security requirements. Serving as primary developer responsible for
+    new feature development and ongoing maintenance.`,
+    category: 'web',
+    technologies: ['Angular', 'Node.js', 'AWS S3', 'Oracle Database', 'AWS GovCloud'],
+    imageUrl: '/placeholder-web.jpg',
+    liveUrl: 'https://publibrary.sec.usace.army.mil/',
     featured: true,
   },
 ];
